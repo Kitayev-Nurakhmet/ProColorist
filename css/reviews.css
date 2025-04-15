@@ -1,0 +1,126 @@
+.reviews-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.reviews-slider {
+	position: relative;
+	width: 100%;
+	height: 430px;
+	overflow: hidden;
+}
+
+.reviews-slider__item {
+	position: absolute;
+	left: calc(50% - 110px);
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 15px;
+	max-width: 240px;
+	max-height: 400px;
+	padding: 20px;
+	background-color: var(--gray);
+	border-radius: 10px;
+	transition: 0.5s;
+}
+
+.reviews-slider__figure {
+	width: 80px;
+	height: 80px;
+}
+
+.reviews-slider__img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.reviews-slider__box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+
+.reviews-slider__title {
+	font-size: 20px;
+	color: var(--primary);
+}
+
+.reviews-slider__group {
+	background-image: url(../images/star-icon.svg);
+	width: 68px;
+	height: 15px;
+}
+
+.reviews-slider__group_four {
+	width: 60px;
+}
+
+.reviews-slider__group_five {
+	width: 75px;
+}
+
+.reviews-slider__button {
+	position: absolute;
+	left: 0;
+	bottom: 13px;
+	color: #fff;
+	border: none;
+}
+
+.reviews-slider__button_prev {
+	left: unset;
+	right: 0;
+}
+
+.reviews-slider__dots {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 8px;
+	z-index: 2;
+}
+
+.reviews-slider__dots span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #ccc;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.reviews-slider__dots span.active {
+	background: #333;
+	transform: scale(1.3);
+}
+
+.review-photos__box {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 15px;
+}
+
+.review-photos__img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+}
+
+.review-photos__img:hover {
+	transform: scale(1.02);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
