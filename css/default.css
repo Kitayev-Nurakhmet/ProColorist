@@ -87,13 +87,13 @@ iframe {
 }
 
 .section {
-	padding: 40px 0;
+	padding: 50px 0;
 }
 
 .title {
 	position: relative;
-	margin-bottom: 30px;
-	font-size: 28px;
+	margin-bottom: 40px;
+	font-size: 36px;
 	text-align: center;
 	color: var(--primary);
 }
@@ -128,4 +128,23 @@ iframe {
 .btn:hover {
 	transform: translateY(-3px);
 	box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+@media (max-width: 650px) {
+	body {
+		font-size: 14px;
+	}
+
+	.container {
+		padding: 0 10px;
+	}
+
+	.section {
+		padding: 30px 0;
+	}
+
+	.title {
+		margin-bottom: 30px;
+		font-size: 32px;
+	}
 }

@@ -1,12 +1,12 @@
 .education-content {
 	display: grid;
-	grid-template-columns: 1fr;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: minmax(max-content, 1fr);
 	align-items: start;
 	gap: 25px 30px;
 	grid-template-areas:
-		"info"
-		"image"
-		"price";
+		"info image"
+		"price image";
 }
 
 .education-content__box {
@@ -20,10 +20,12 @@
 }
 
 .education-content__text {
+	max-width: 500px;
 	margin-bottom: 15px;
 }
 
 .education-content__text:last-child {
+	max-width: 100%;
 	margin-bottom: 0;
 }
 
@@ -53,15 +55,11 @@
 
 .education-info {
 	grid-area: price;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-	gap: 15px;
 }
 
 .education-info__card {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	max-width: 100%;
+	min-height: 157px;
 	padding: 15px;
 	background: var(--gray);
 	border-radius: 8px;
@@ -93,15 +91,42 @@
 
 .education__figure {
 	grid-area: image;
-	width: 100%;
-	max-width: 500px;
 }
 
 .education__img {
 	width: 100%;
-	height: 512px;
+	max-height: 570px;
 	object-fit: cover;
 	object-position: center;
 	border-radius: 10px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 900px) {
+	.education-content {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"info"
+			"image"
+			"price";
+	}
+
+	.education-info__card {
+		min-height: 100%;
+	}
+}
+
+@media (max-width: 900px) {
+	.education-content__title {
+		font-size: 20px;
+	}
+
+	.education-content__text {
+		max-width: 420px;
+		margin-bottom: 10px;
+	}
+
+	.education-content__item {
+		margin-bottom: 5px;
+	}
 }
